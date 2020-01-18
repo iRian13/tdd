@@ -18,9 +18,25 @@
                             <h5 class="m-0">Add Brand</h5>
                         </div>
                         <div class="card-body">
-                            <h6 class="card-title">Special title treatment</h6>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <form action="" method="post" m>
+                                <div class="form-group row">
+                                    <label for="name" class="col-sm-2 col-form-label">Name</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="name" placeholder="Brand Name" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="file" class="col-sm-2 col-form-label">Image</label>
+                                    <div class="col-sm-10">
+                                        <input type="file" class="form-control-file" id="file">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10 offset-1 text-center">
+                                        <button type="submit" class="btn btn-primary">Add Brand</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

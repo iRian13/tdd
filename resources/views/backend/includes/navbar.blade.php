@@ -33,13 +33,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{route('brand.create')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add Brand</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{route('brand.list')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Brand List</p>
                             </a>

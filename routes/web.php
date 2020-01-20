@@ -21,6 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 /*Brand Route*/
 Route::get('/brand', 'BrandController@index')->name('brand.list');
-Route::get('/brand-create', 'BrandController@create')->name('brand.create');
-Route::post('/brand-create', 'BrandController@store')->name('brand.store');
+Route::get('/brand/create', 'BrandController@create')->name('brand.create');
+Route::post('/brand', 'BrandController@store')->name('brand.store');
 /*Brand Route End*/

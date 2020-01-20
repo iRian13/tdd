@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Brand;
+use App\Providers\PhotoUploadProvider;
 use Illuminate\Http\Request;
 
 class BrandController extends Controller
 {
     public function index(){
-        return view('backend.brand.index');
+        $brands = Brand::all();
+        return view('backend.brand.index', compact('brands'));
     }
 
     public function create(){
@@ -19,9 +22,10 @@ class BrandController extends Controller
             'name' => 'required',
             'image'=> 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
-
-        $image = $request->file('image');
-        $folder_name = 'upload/images/brand';
-        dd($image);
+        if ($request->hasFile('image')){
+            $data['image']=PhotoUploadProvider::photoUpload($request->file('image'),'upload/images/brand/',75,75);
+        }
+        Brand::create($data);
+        return redirect('/brand');
     }
 }

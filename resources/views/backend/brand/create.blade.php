@@ -15,7 +15,14 @@
                 <div class="col-lg-8 offset-2">
                     <div class="card card-primary card-outline">
                         <div class="card-header">
-                            <h5 class="m-0">Add Brand</h5>
+                            <div class="row">
+                                <div class="col-md-6 text-left">
+                                    <h5 class="m-0">Add Brand</h5>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <a href="{{route('brand.list')}}" class="btn btn-sm btn-info">Brand List</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="card-body">
                             <form action="{{route('brand.store')}}" method="post" enctype="multipart/form-data">
@@ -53,4 +60,5 @@
             <!-- /.row -->
         </div><!-- /.container-fluid -->
     </div>
+
 @endsection
